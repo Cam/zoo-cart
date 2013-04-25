@@ -9,7 +9,7 @@ COMING SOON
 
 Not much to see here yet... move along :p
 
-I'm still compiling this project for upload. I'm new to this, so please bare with me.
+I'm still compiling this project for upload. I'm new to this, so please bear with me.
 
 
 ISSUES
