@@ -19,9 +19,5 @@ The ZOO Cart works really well so far, but some things like product variant 'sel
 
 
 Thanks for reading!
-   ______              
-  / ____/___ _____ ___ 
- / /   / __ `/ __ `__ \
-/ /___/ /_/ / / / / / /
-\____/\__/_/_/ /_/ /_/
- http:cam.vc
+Cam
+http:cam.vc
