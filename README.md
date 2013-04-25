@@ -19,5 +19,7 @@ The ZOO Cart works really well so far, but some things like product variant 'sel
 
 
 Thanks for reading!
+
 Cam
+
 http:cam.vc
