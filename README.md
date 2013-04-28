@@ -1,7 +1,11 @@
 ZOO Cart
 ========
 
-ZOO Cart is basic shopping cart for ZOO CCK using SimpleCart
+ZOO Cart is basic shopping cart element for ZOO CCK by YooTheme using SimpleCart js
+
+Cam: http://cam.vc
+Simplecart: http://simplecartjs.org
+YooTheme: http://yootheme.com
 
 
 COMING SOON
@@ -15,5 +19,3 @@ The ZOO Cart works really well so far, but some things like product variant 'sel
 
 
 Thanks for reading!
-
-Cam - http:cam.vc
