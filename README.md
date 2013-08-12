@@ -5,6 +5,8 @@ ZOO Cart is basic shopping cart element for ZOO CCK by YooTheme using SimpleCart
 
 A working example can be found at http://amrcn.com
 
+The website for this project can be found at http://cam.vc/zoo-cart/
+
 If anybody thinks this is a worthy project, please contact me so we can get it going again.
 
 Cam: http://cam.vc
