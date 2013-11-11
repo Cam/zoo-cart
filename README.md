@@ -7,7 +7,7 @@ A working example can be found at http://cam.vc/zoo-cart/demo/joomla25/
 
 The website for this project can be found at http://cam.vc/zoo-cart/
 
-If anybody thinks this is a worthy project, please contact me so we can get it going again.
+The files in this repositiory assume you are running Joomla! 2.5 and using YOO Nano 2 Theme. The files should work for any recent version of Joomla!, ZOO and any template.
 
 Cam: http://cam.vc
 Simplecart: http://simplecartjs.org
