@@ -3,15 +3,15 @@ ZOO Cart
 
 ZOO Cart is basic shopping cart element for ZOO CCK by YooTheme using SimpleCart js
 
-Demo: http://cam.vc/zoo-cart/demo/
+* Demo: http://cam.vc/zoo-cart/demo/
 
-Project: http://cam.vc/zoo-cart/
+* Project: http://cam.vc/zoo-cart/
 
-Cam: http://camgould.com
+* Cam: http://camgould.com
 
-Simplecart: http://simplecartjs.org
+* Simplecart: http://simplecartjs.org
 
-YooTheme: http://yootheme.com
+* YooTheme: http://yootheme.com
 
 The files in this repositiory assume you are running Joomla! 2.5 and using YOO Nano 2 Theme. The files should work for any recent version of Joomla!, ZOO and any template. The ZOO Cart works really well so far, but some things like product variant 'selectors' need a lot of work. I'm hoping the community at large can help with this.
 
