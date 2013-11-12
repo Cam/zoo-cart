@@ -14,6 +14,7 @@ The files in this repositiory assume you are running Joomla! 2.5 and using YOO N
 Peace, love and code.
 
 
+
 =========
 
 Copyright (C) 2013 Cam Gould http://camgould.com
