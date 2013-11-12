@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <install type="module" version="1.5.0">
-    <name>simplecart</name>
-    <author></author>
-    <version></version>
-    <description></description>
+    <name>ZOO Cart Module</name>
+    <author>Cam Gould and Nikolay Korban</author>
+    <version>0.1</version>
+    <description>Cart Module for ZOO Cart</description>
     <files>
         <filename>mod_simplecart.xml</filename>
         <filename module="mod_simplecart">mod_simplecart.php</filename>
@@ -16,84 +16,80 @@
     <fields name="params" >
         <fieldset name="basic" >
                     
-            <field type="text" name="title" label="Title" description="" />
-            <field type="media" name="image" label="Image" description=""  directory="media/user/products/"/>
-	    <field type="text" name="price"      label="Price" description="" />
-	    
-	    <field type="text" name="optionName" label="Option Name" description="" />
-	    
-	    
-	    <field type="text" name="option1" label="Option1" description="" />
-	    <field type="text" name="option2" label="Option2" description="" />
-	    <field type="text" name="option3" label="Option3" description="" />
-	    <field type="text" name="option4" label="Option4" description="" />
-	    <field type="text" name="option5" label="Option5" description="" />
-            <field type="text" name="option6" label="Option6" description="" />
-	    <field type="text" name="option7" label="Option7" description="" />
-	    <field type="text" name="option8" label="Option8" description="" />
-	    <field type="text" name="option9" label="Option9" description="" />
-	    <field type="text" name="option10" label="Option10" description="" />
-	    
-	    
-            <field type="text" name="price1"      label="Price1" description="" />
-	    <field type="text" name="price2"      label="Price2" description="" />
-	    <field type="text" name="price3"      label="Price3" description="" />
-	    <field type="text" name="price4"      label="Price4" description="" />
-	    <field type="text" name="price5"      label="Price5" description="" />
-            <field type="text" name="price6"      label="Price6" description="" />
-	    <field type="text" name="price7"      label="Price7" description="" />
-	    <field type="text" name="price8"      label="Price8" description="" />
-	    <field type="text" name="price9"      label="Price9" description="" />
-	    <field type="text" name="price10"      label="Price10" description="" />
+			<field type="text" name="title" label="Title" description="" />
+			<field type="media" name="image" label="Image" description=""  directory="media/user/products/"/>
+			<field type="text" name="price" label="Price" description="" />
+		
+			<field type="text" name="optionName" label="Option Name" description="" />
+		
+		
+			<field type="text" name="option1" label="Option1" description="" />
+			<field type="text" name="option2" label="Option2" description="" />
+			<field type="text" name="option3" label="Option3" description="" />
+			<field type="text" name="option4" label="Option4" description="" />
+			<field type="text" name="option5" label="Option5" description="" />
+			<field type="text" name="option6" label="Option6" description="" />
+			<field type="text" name="option7" label="Option7" description="" />
+			<field type="text" name="option8" label="Option8" description="" />
+			<field type="text" name="option9" label="Option9" description="" />
+			<field type="text" name="option10" label="Option10" description="" />
+		
+		
+			<field type="text" name="price1" label="Price1" description="" />
+			<field type="text" name="price2" label="Price2" description="" />
+			<field type="text" name="price3" label="Price3" description="" />
+			<field type="text" name="price4" label="Price4" description="" />
+			<field type="text" name="price5" label="Price5" description="" />
+			<field type="text" name="price6" label="Price6" description="" />
+			<field type="text" name="price7" label="Price7" description="" />
+			<field type="text" name="price8" label="Price8" description="" />
+			<field type="text" name="price9" label="Price9" description="" />
+			<field type="text" name="price10" label="Price10" description="" />
 
-	    
-	    
-	    
-            <field type="text" name="addtext"      label="Add text" description=""  default="Add"/>
-      
+		
+			<field type="text" name="addtext" label="Add text" description=""  default="Add"/>
+
         </fieldset>
-             <fieldset
-				name="advanced">
-				<field
-					name="layout"
-					type="modulelayout"
-					label="JFIELD_ALT_LAYOUT_LABEL"
-					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
 
-				<field
-					name="moduleclass_sfx"
-					type="text"
-					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
-					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
 
-				<field
-					name="cache"
-					type="list"
-					default="1"
-					label="COM_MODULES_FIELD_CACHING_LABEL"
-					description="COM_MODULES_FIELD_CACHING_DESC">
-					<option
-						value="1">JGLOBAL_USE_GLOBAL</option>
-					<option
-						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
-				</field>
+		<fieldset name="advanced">
+			<field
+				name="layout"
+				type="modulelayout"
+				label="JFIELD_ALT_LAYOUT_LABEL"
+				description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
 
-				<field
-					name="cache_time"
-					type="text"
-					default="900"
-					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
-					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
-				<field
-					name="cachemode"
-					type="hidden"
-					default="static">
-					<option
-						value="static"></option>
-				</field>
-			</fieldset>
+			<field
+				name="moduleclass_sfx"
+				type="text"
+				label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+				description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+			<field
+				name="cache"
+				type="list"
+				default="1"
+				label="COM_MODULES_FIELD_CACHING_LABEL"
+				description="COM_MODULES_FIELD_CACHING_DESC">
+				<option value="1">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+			</field>
+
+			<field
+				name="cache_time"
+				type="text"
+				default="900"
+				label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+				description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			<field
+				name="cachemode"
+				type="hidden"
+				default="static">
+				<option value="static"></option>
+			</field>
+		</fieldset>
                     
                     
     </fields>
-</config>
+  </config>
 </install>

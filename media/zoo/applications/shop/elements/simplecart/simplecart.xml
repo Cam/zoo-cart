@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <element type="simplecart" group="Web Service">
 	<name>Simplecart</name>
-	<author>Nikolay Korban & Cam Gould</author>
-	<creationDate>September 2012</creationDate>
-	<copyright></copyright>
+	<author>Cam Gould and Nikolay Korban</author>
+	<creationDate>2012</creationDate>
+	<copyright>Cam Gould</copyright>
 	<authorEmail></authorEmail>
-	<authorUrl></authorUrl>
-	<version>1.0</version>
-	<description></description>
-
+	<authorUrl>http://camgould.com</authorUrl>
+	<version>0.1</version>
+	<description>ZOO Cart - Simplecart element for ZOO for Joomla</description>
 </element>

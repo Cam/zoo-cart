@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <install type="module" version="1.5.0">
-    <name>simplecart_total</name>
-    <author></author>
-    <version></version>
-    <description></description>
+    <name>ZOO Cart Total Module</name>
+    <author>Cam Gould and Nikolay Korban</author>
+    <version>0.1</version>
+    <description>Totals Module for ZOO Cart</description>
     <files>
         <filename>mod_simplecart_total.xml</filename>
         <filename module="mod_simplecart_total">mod_simplecart_total.php</filename>
@@ -12,17 +12,14 @@
         <filename>tmpl/default.php</filename>
         <filename>tmpl/index.html</filename>
     </files>
-<config>
-    <fields name="params" >
-            <fieldset name="basic" >
 
-                    <field type="media" name="Image" label="Image" description=""  directory="images/" default="modules/mod_simplecart_total/images/cart.png"/>
-                    
-            
-                    
-            </fieldset>
-             <fieldset
-				name="advanced">
+	<config>
+		<fields name="params" >
+			<fieldset name="basic" >
+				<field type="media" name="Image" label="Image" description=""  directory="images/" default="modules/mod_simplecart_total/images/cart.png"/>		
+			</fieldset>
+
+			<fieldset name="advanced">
 				<field
 					name="layout"
 					type="modulelayout"
@@ -41,10 +38,8 @@
 					default="1"
 					label="COM_MODULES_FIELD_CACHING_LABEL"
 					description="COM_MODULES_FIELD_CACHING_DESC">
-					<option
-						value="1">JGLOBAL_USE_GLOBAL</option>
-					<option
-						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
 				</field>
 
 				<field
@@ -57,12 +52,11 @@
 					name="cachemode"
 					type="hidden"
 					default="static">
-					<option
-						value="static"></option>
-				</field>
+					<option value="static"></option>
+				</field>	
 			</fieldset>
-                    
-                    
-    </fields>
-</config>
+					
+					
+		</fields>
+	</config>
 </install>
