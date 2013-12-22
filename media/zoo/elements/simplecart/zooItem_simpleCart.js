@@ -1,10 +1,10 @@
 
 (function ($) {
 	$(document).ready( function() { 
-	 	 var article =  $(document).first('.item');
+	 //	 var article =  $(document).first('.item');
 	 	 // set cart config
-	 	 console.log(article);
-	 	 var config = {};
+	 
+		/*var config = {};
 	 	 config.checkout = {type:article.find('.config_checkout_type').val(), email: article.find('.config_checkout_email').val(), marchantID: article.find('.config_checkout_marchantID').val()};
 	 	 config.currency = article.find('.config_checkout_currency').val(); 
 	 	
@@ -24,10 +24,11 @@
 	 	config.cartStyle = "div";
 	 	config.excludeFromCheckout = ['image'];
 	 	
-	 	// tax rate 
-	 	if (article.find('.config_taxRate').val())
-	 	config.taxRate = article.find('.config_taxRate').val();
-	 	
+	 	// tax rate
+		if (article.find('.config_taxRate').val())
+		config.taxRate = parseFloat(article.find('.config_taxRate').val());
+
+
 	 	// add custom options to cart columns 
 	 	
 	 	config.cartColumns = new Array();
@@ -52,17 +53,16 @@
 	 	config.cartColumns.push({ attr: article.find('.item_option5').val() , label: article.find('.item_option5').val() });
 	 	
         config.cartColumns.push({ attr: "price" , label: "Price", view: 'currency' });
-        config.cartColumns.push({ attr: "quantity" , label: "Qty" });
+        config.cartColumns.push({ attr: "quantity" , label: "Qty", view: 'input' });
+		config.cartColumns.push({ view: "remove" , text: "Remove" , label: false });
         config.cartColumns.push({ attr: "total" , label: "SubTotal", view: 'currency' });
-        config.cartColumns.push({ view: "remove" , text: "Remove" , label: false });
+        
 
 	 //	console.log(config);
 	 	
 	 	// set config 
 	 	simpleCart(config);
-
-
-	 	 
+*/
 	 	 $('.pre_item_add').click(function() {
 	 	 
 	 	 article =  $(this).closest('.item');
@@ -92,27 +92,27 @@
 	 	 	cartObject.quantity = 1;
 	 	 	
 	 	 // get option 1
-	 	 var element = article.find('.option_'+item_option1);
+	 	 element = article.find('.option_'+item_option1);
 	 	 if (element.val())
 	 	 	cartObject[item_option1] = element.val();
 	 	 	
 	 	 // get option 2
-	 	 var element = article.find('.option_'+item_option2);
+	 	 element = article.find('.option_'+item_option2);
 	 	 if (element.val())
 	 	 	cartObject[item_option2] = element.val();
 	 	 	
 	 	 // get option 3
-	 	 var element = article.find('.option_'+item_option3);
+	 	 element = article.find('.option_'+item_option3);
 	 	 if (element.val())
 	 	 	cartObject[item_option3] = element.val();
 	 	 	
 	 	 // get option 4
-	 	 var element = article.find('.option_'+item_option4);
+	 	 element = article.find('.option_'+item_option4);
 	 	 if (element.val())
 	 	 	cartObject[item_option4] = element.val();
 	 	 	
 	 	 // get option 5
-	 	 var element = article.find('.option_'+item_option5);
+	 	 element = article.find('.option_'+item_option5);
 	 	 if (element.val())
 	 	 	cartObject[item_option5] = element.val();
 	 	 

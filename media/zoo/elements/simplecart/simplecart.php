@@ -30,6 +30,7 @@ public function render($params = array()) {
 
 	// set config 
 
+/*
 	if ($this->config->checkout_type)
 		$display .= '<input class="config_checkout_type" type="hidden" value="'.$this->config->checkout_type.'" />';
 
@@ -59,6 +60,7 @@ public function render($params = array()) {
 	if ($this->config->taxShipping)
 		$display .= '<input class="config_taxShipping" type="hidden" value="'.$this->config->taxShipping.'" />';
 
+*/
 
 
 
@@ -74,7 +76,7 @@ public function render($params = array()) {
 				$display .= '<input class="item_price" type="hidden" value="'.$data[0]['value'].'" />';
 				break;
 			case $this->config->get('image_field'):
-				$display .= '<input class="item_image" type="hidden" value="'.$data['file'].'" />';
+				$display .= '<input class="item_image" type="hidden" value="http://'.$_SERVER['SERVER_NAME'].DIRECTORY_SEPARATOR.$data['file'].'" />';
 				break;
 
 			case $this->config->get('quantity_field'):

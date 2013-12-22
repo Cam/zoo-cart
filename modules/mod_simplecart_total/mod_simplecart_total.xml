@@ -11,12 +11,14 @@
         <filename>helper.php</filename>
         <filename>tmpl/default.php</filename>
         <filename>tmpl/index.html</filename>
+        <folder>fields</folder>
     </files>
 
 	<config>
 		<fields name="params" >
-			<fieldset name="basic" >
+			<fieldset name="basic" addfieldpath="/modules/mod_simplecart_total/fields">
 				<field type="media" name="Image" label="Image" description=""  directory="images/" default="modules/mod_simplecart_total/images/cart.png"/>		
+				<field name="application" type="zooapplication" default="" label="Zoo App" description="APPLICATION_DESCRIPTION" categories="false" frontpage="false" />
 			</fieldset>
 
 			<fieldset name="advanced">
