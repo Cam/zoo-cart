@@ -21,7 +21,7 @@ class ElementSimplecart extends Element  {
 
 public function render($params = array()) {
 	$params = $this->app->data->create($params);
-	$this->app->document->addScript('elements:simplecart/simpleCart.js');
+//	$this->app->document->addScript('elements:simplecart/simpleCart.js');
 	$this->app->document->addScript('elements:simplecart/zooItem_simpleCart.js');
 
 	

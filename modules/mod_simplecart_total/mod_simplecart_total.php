@@ -11,7 +11,9 @@
  
 // no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' );
- 
+$doc = JFactory::getDocument();
+$doc->addStyleSheet( 'modules/mod_simplecart_total/assets/style.css' );
+$doc->addScript( 'modules/mod_simplecart_total/assets/simpleCart.js' );
 // Include the syndicate functions only once
 require_once( dirname(__FILE__).DIRECTORY_SEPARATOR.'helper.php' );
  
