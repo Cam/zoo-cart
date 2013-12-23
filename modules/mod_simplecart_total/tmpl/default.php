@@ -16,171 +16,7 @@ $Image = $params->get('Image');
     <div id="framename">Shopping Bag</div>
     <div id="empty_cart"><a href="javascript:;" class="simpleCart_empty">empty</a> | <a href="javascript:;" id="simpleCart_close">close</a></div>
     <section>
-        <style>
-
-/*	    #cart-module {
-		cursor: pointer;
-		font-size: 11px;
-		margin: 0 auto;
-		width: 130px;
-	    } */
-	    .simpleCarticon{
-		background: url("../images/cart.png") no-repeat scroll 0 0 transparent;
-		display: inline-block;
-		height: 22px;
-		vertical-align: middle;
-		width: 22px;
-	    }
-            #framename{
-/*                font-size: 24px;
-                font-weight: bold; */
-
-            }
-            #shoping_cart{
-	/*	background-color: #FFFFFF;
-
-		margin-left: -642px;
-                left: 50%;
-		padding: 15px;
-		position: absolute;
-		top: 29px;
-		width: 500px;
-		z-index: 99;
-		border: solid thin #D4DE23;
-		font-weight: bold;
-		-webkit-border-radius: .7em;
-
-		-moz-border-radius: .7em;
-
-		border-radius: .7em; */
-            }
-            #empty_cart{
-       /*         float: inherit;
-                text-align: right;
-                margin-right: 43px; */
-            }
-            .simpleCart_items th{
-          /*      color:#333;
-                text-align:left;
-                padding:10px 30px;
-
-                background: #ededed;
-                background: -moz-linear-gradient(top,  #f7f7f7 0%, #ededed 100%);
-                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#ededed));
-                background: -webkit-linear-gradient(top,  #f7f7f7 0%,#ededed 100%);
-                background: -o-linear-gradient(top,  #f7f7f7 0%,#ededed 100%);
-                background: -ms-linear-gradient(top,  #f7f7f7 0%,#ededed 100%);
-                background: linear-gradient(top,  #f7f7f7 0%,#ededed 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#ededed',GradientType=0 ); */
-            }
-            .simpleCart_items td{
- /*               padding: 0 5px !important;
-                vertical-align:middle; */
-
-
-            }
-            .item-image,
-            .item-image img /* {width:60px;} */
-            .item-name{ 
-/*		font-style: italic;
-		font-weight: bold;
-		width: 220px */
-	    }
-            .item-quantity,
-            .item-quantity input{
-                width:30px;
-                text-align:center;
-            }
-            .item-price,
-            .item-subtotal/* {width:50px;} */
-            #checkout {
-   /*             float: inherit;
-                text-align: center;
-                padding: .5em;
-
-		width: 15em;
-
-		padding: .5em;
-
-		color: #ffffff;
-
-		text-shadow: 1px 1px 1px #000;
-
-		border: solid thin #D4DE23;
-		font-weight: bold;
-		-webkit-border-radius: .7em;
-
-		-moz-border-radius: .7em;
-
-		border-radius: .7em;
-
-		-webkit-box-shadow: 2px 2px 3px #999; 
-
-		box-shadow: 2px 2px 2px #bbb;
-
-		background-color: #A3CE36;
-
-		background-image: -webkit-gradient(linear, left top, left bottom, from(#e9ede8), to(#ce401c),color-stop(0.4, #8c1b0b)); */
-            }
-/*	    #checkoutdiv {
-		width: 100%;
-		text-align: center;
-		} */
-
-
-
-
-
-
-
-
-	    .simpleCart_shelfItem {
-/*		margin: 20px 0;
-		text-align: center;
-		width: 150px; */
-	    }
-
-	    .simpleCart_shelfItem h2{
-/*		font-size: 14px;
-		font-weight: bold;
-		margin: 0px; */
-	    }
-
-	    .simpleCart_shelfItem .item_price{
-/*		font-size: bold;
-		font-style: italic; */
-	    }
-
-	    .item_add{
-/*		float: inherit;
-		text-align: center;
-		padding: .3em;
-		display:block;
-		width: 11em;
-		font-size: 13px;
-		color: #ffffff;
-
-		text-shadow: 1px 1px 1px #000;
-
-		border: solid thin #D4DE23;
-		font-weight: bold;
-		-webkit-border-radius: .7em;
-
-		-moz-border-radius: .7em;
-
-		border-radius: .7em;
-
-		-webkit-box-shadow: 2px 2px 3px #999; 
-
-		box-shadow: 2px 2px 2px #bbb;
-
-		background-color: #A3CE36;
-
-		background-image: -webkit-gradient(linear, left top, left bottom, from(#e9ede8), to(#ce401c),color-stop(0.4, #8c1b0b)); */
-	    }
-
-
-        </style>
+      
         <div class="simpleCart_items"></div>
 	<div  id="checkoutdiv"><button  id="checkout"  class="simpleCart_checkout">Checkout&nbsp;(<span class="simpleCart_total"></span>)</button></div>
 
@@ -199,24 +35,75 @@ $Image = $params->get('Image');
       });
 	});
 	
-        simpleCart({
-            //Setting the Cart Columns for the sidebar cart display.
-            cartColumns: [
-                { attr: "image", label: "", view: "image"},
-                //Name of the item
-                { attr: "name" , label: "" },
-                { attr: "price", label: "", view: "currency" },
-                //Subtotal of that row (quantity of that item * the price)
-                { attr: "total" , label: "", view: "currency"  },
-                //Quantity displayed as an input
-                { attr: "quantity", label: "", view: "input"}
-                //Built in view for a remove link
+        var config = {};
+	 	 config.checkout = {type:"<?php echo $simplecartConfig['checkout_type'];?>", email: "<?php echo $simplecartConfig['checkout_email'];?>", marchantID: "<?php echo $simplecartConfig['checkout_marchantID'];?>"};
+	 	 config.currency = "<?php echo $simplecartConfig['checkout_currency'];?>"; 
+	 	
+		 config.cartStyle = "div";
+	 	 config.excludeFromCheckout = ['image'];
+	 	
+		<?php 
+			if ($simplecartConfig['shippingFlatRate']) 
+				echo "config.shippingFlatRate = ".$simplecartConfig['shippingFlatRate'].";"; 
+
+			else if ($simplecartConfig['shippingQuantityRate']) 
+				echo "config.shippingQuantityRate = ".$simplecartConfig['shippingQuantityRate'].";"; 
+				
+			else if ($simplecartConfig['shippingTotalRate']) 
+				echo "config.shippingTotalRate = ".$simplecartConfig['shippingTotalRate'].";"; 
 			
-                //Price of item
+				// tax settings	
+			if ($simplecartConfig['taxShipping']) 
+				echo "config.taxShipping = ".$simplecartConfig['taxShipping'].";"; 
+				
+			if ($simplecartConfig['taxRate']) 
+				echo "config.taxRate = ".$simplecartConfig['taxRate'].";"; 
+				
+		 ?>
+	 	
+	
+
+	 	// add custom options to cart columns 
+	 	
+	 	config.cartColumns = new Array();
+		
+		<?php 
+			if ($simplecartConfig['image_field']) 
+				echo "config.cartColumns.push({ attr: 'image' , label: 'Image', view: 'image' });"; 
+				
+			echo " config.cartColumns.push({ attr: 'name' , label: 'Name' } );";
 			
-            ],
-            cartStyle: "div"
-        });
+			// add custom options 
+			if ($simplecartConfig['option1_field']) 
+				echo "config.cartColumns.push({ attr: '".$simplecartConfig['option1_field']."', label: '".$simplecartConfig['option1_field']."' });" ; 
+			
+			if ($simplecartConfig['option2_field']) 
+				echo "config.cartColumns.push({ attr: '".$simplecartConfig['option2_field']."', label: '".$simplecartConfig['option2_field']."' });" ; 
+			
+			if ($simplecartConfig['option3_field']) 
+				echo "config.cartColumns.push({ attr: '".$simplecartConfig['option3_field']."', label: '".$simplecartConfig['option3_field']."' });" ; 
+			
+			if ($simplecartConfig['option4_field']) 
+				echo "config.cartColumns.push({ attr: '".$simplecartConfig['option4_field']."', label: '".$simplecartConfig['option4_field']."' });" ; 
+			
+			if ($simplecartConfig['option5_field']) 
+				echo "config.cartColumns.push({ attr: '".$simplecartConfig['option5_field']."', label: '".$simplecartConfig['option5_field']."' });" ; 
+			
+				
+		 ?>
+	
+        config.cartColumns.push({ attr: "price" , label: "Price", view: 'currency' });
+        config.cartColumns.push({ attr: "quantity" , label: "Qty", view: 'input' });
+		config.cartColumns.push({ view: "remove" , text: "Remove" , label: false });
+        config.cartColumns.push({ attr: "total" , label: "SubTotal", view: 'currency' });
+        
+
+	 //	console.log(config);
+	 	
+	 	// set config 
+	 	simpleCart(config);
+
+
 	
     </script>
 </div>
