@@ -23,7 +23,8 @@ class ElementQuantity extends Element {
 			Boolean - true, on success
 	*/
 	public function hasValue($params = array()) {
-		return $this->get('option')[0];
+		$value = $this->get('option');
+		return $value[0];
 	}
 
 	/*
