@@ -35,7 +35,8 @@ if (!$application = $zoo->table->application->get($params->get('application', 0)
 }
 
 // get cart element
-$elements =  $application->getTypes()['item']->config->elements;
+$elements =  $application->getTypes();
+$elements = $elements['item']->config->elements;
 foreach ($elements as $element)
 {
 	if ($element['type'] == 'simplecart')
